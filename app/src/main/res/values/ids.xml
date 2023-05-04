@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="email_field" type="id" />
+    <item name="password_field" type="id" />
+    <item name="login_button" type="id" />
+    <item name="date_text_view" type="id" />
+    <item name="profile_spinner" type="id" />
+    <item name="add_profile_button" type="id" />
+</resources>

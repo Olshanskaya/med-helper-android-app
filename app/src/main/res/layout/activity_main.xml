@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Верхняя панель с выпадающим списком и кнопкой для добавления нового профиля -->
+    <LinearLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Выпадающий список с профилями -->
+        <Spinner
+            android:id="@+id/profile_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/profiles"
+            android:prompt="@string/select_profile" />
+
+        <!-- Кнопка для добавления нового профиля -->
+        <Button
+            android:id="@+id/add_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_profile"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <!-- Основное содержимое экрана -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_panel"
+        android:background="@color/white" />
+
+</RelativeLayout>
