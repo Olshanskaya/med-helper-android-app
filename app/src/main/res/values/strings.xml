@@ -3,7 +3,8 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Пароль</string>
-    <string name="action_sign_in">Зарегестрироваться или авторизоваться</string>
+    <string name="action_sign_in">Войти</string>
+    <string name="action_new_psw">Восстановить пароль или зарегестрироваться</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
