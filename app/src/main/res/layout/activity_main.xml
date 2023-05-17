@@ -41,11 +41,76 @@
     </LinearLayout>
 
     <!-- Основное содержимое экрана -->
-    <FrameLayout
+
+    <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/top_panel"
-        android:background="@color/white" />
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingStart="16dp">
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="Изменить" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имя:" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Начало дня:" />
+
+            <TextView
+                android:id="@+id/startDayTextView"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    В этом примере внешний LinearLayout имеет вертикальную ориентацию и содержит два внутренних LinearLayout с горизонтальной ориентацией. textView1 и textView2 размещаются в первом внутреннем LinearLayout, а textView3 и textView4 - во втором. Таким образом, textView1 и textView2 будут находиться в одной строке, а textView3 и textView4 - в следующей строке под ними.
+
+
+
+
+
+
+
 
 </RelativeLayout>
