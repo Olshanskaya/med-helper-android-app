@@ -7,4 +7,5 @@
     <item name="date_text_view" type="id" />
     <item name="profile_spinner" type="id" />
     <item name="add_profile_button" type="id" />
+    <item name="logout_button" type="id" />
 </resources>

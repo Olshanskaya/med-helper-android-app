@@ -52,14 +52,13 @@ public class LoginActivity extends AppCompatActivity {
         mNewPswButton = findViewById(R.id.new_psw_button);
 
 
-        mLoginButton.setOnClickListener(new View.OnClickListener() {
+        mNewPswButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
             }
         });
-
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,11 +93,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
             }
-
-            ;
         });
-
     }
 
-    ;
 }

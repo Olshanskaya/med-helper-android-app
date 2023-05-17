@@ -2,6 +2,7 @@ package com.example.medhelperandroid;
 
 import android.app.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.medhelperandroid.R;
+import com.example.medhelperandroid.ui.login.LoginActivity;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Spinner mProfileSpinner;
     private List<String> mProfileList;
+
+    private Button mLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Здесь можно добавить код для открытия экрана добавления нового профиля
                 Toast.makeText(MainActivity.this, "Добавление нового профиля", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        // Добавляем обработчик нажатия на кнопку "выход"
+        Button logoutButton = findViewById(R.id.logout_button);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // После успешной проверки, можно запустить следующую активность
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); // Опционально закрываем эту активность, чтобы пользователь не мог вернуться к экрану входа по кнопке "Назад"
             }
         });
     }
