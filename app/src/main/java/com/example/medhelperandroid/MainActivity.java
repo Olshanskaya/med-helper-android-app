@@ -95,13 +95,27 @@ public class MainActivity extends AppCompatActivity {
 
         TextView nameTextView = findViewById(R.id.nameTextView);
         TextView dayStartTextView = findViewById(R.id.startDayTextView);
+        TextView endDayTextView = findViewById(R.id.endDayTextView);
+        TextView breakfastTextView = findViewById(R.id.breakfastTextView);
+        TextView lunchTextView = findViewById(R.id.lunchTextView);
+        TextView dinerTextView = findViewById(R.id.dinerTextView);
         mProfileSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedProfile = mProfileList.get(position);
                 Patient patient = userList.get(position);
+
                 nameTextView.setText(patient.getName());
-                dayStartTextView.setText(patient.getStartDay());
+                if(patient.getStartDay() != null)
+                    dayStartTextView.setText(patient.getStartDay());
+                if(patient.getEndDay() != null)
+                    endDayTextView.setText(patient.getEndDay());
+                if(patient.getBreakfast() != null)
+                    breakfastTextView.setText(patient.getBreakfast());
+                if(patient.getLunch() != null)
+                    lunchTextView.setText(patient.getLunch());
+                if(patient.getDinner() != null)
+                    dinerTextView.setText(patient.getDinner());
                 Toast.makeText(MainActivity.this, "Выбран профиль " + selectedProfile, Toast.LENGTH_SHORT).show();
             }
 
@@ -116,8 +130,10 @@ public class MainActivity extends AppCompatActivity {
         addProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Здесь можно добавить код для открытия экрана добавления нового профиля
                 Toast.makeText(MainActivity.this, "Добавление нового профиля", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, CreateProfileActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

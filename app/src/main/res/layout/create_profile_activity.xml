@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Введите имя"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/breakfast_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время завтрака:"
+        android:textSize="16sp"
+        android:layout_below="@id/name_edittext"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/breakfast_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="не выбрано"
+        android:textSize="16sp"
+        android:layout_below="@id/breakfast_time_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/breakfast_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/breakfast_time_label"
+        android:layout_below="@id/name_edittext"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Выбрать время ужина" />
+
+    <TextView
+        android:id="@+id/lunch_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время обеда:"
+        android:textSize="16sp"
+        android:layout_below="@id/breakfast_time_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/lunch_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="не выбрано"
+        android:textSize="16sp"
+        android:layout_below="@id/lunch_time_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/lunch_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/lunch_time_label"
+        android:layout_below="@id/breakfast_time_button"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Выбрать время обеда" />
+
+    <TextView
+        android:id="@+id/dinner_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время ужина:"
+        android:textSize="16sp"
+        android:layout_below="@id/lunch_time_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/dinner_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="не выбрано"
+        android:textSize="16sp"
+        android:layout_below="@id/dinner_time_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/dinner_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/dinner_time_label"
+        android:layout_below="@id/lunch_time_button"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Выбрать время завтрака" />
+
+
+    <TextView
+        android:id="@+id/start_day_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время начала дня:"
+        android:textSize="16sp"
+        android:layout_below="@id/dinner_time_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/start_day_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="не выбрано"
+        android:textSize="16sp"
+        android:layout_below="@id/start_day_time_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/start_day_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/start_day_time_label"
+        android:layout_below="@id/dinner_time_button"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Выбрать время ужина" />
+
+
+    <TextView
+        android:id="@+id/end_day_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время окончания дня:"
+        android:textSize="16sp"
+        android:layout_below="@id/start_day_time_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/end_day_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="не выбрано"
+        android:textSize="16sp"
+        android:layout_below="@id/end_day_time_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/end_day_time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/end_day_time_label"
+        android:layout_below="@id/start_day_time_button"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Выбрать время ужина" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/patient_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end_day_time_button"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Отменить" />
+
+    <Button
+        android:id="@+id/patient_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end_day_time_button"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Сохранить" />
+</RelativeLayout>
