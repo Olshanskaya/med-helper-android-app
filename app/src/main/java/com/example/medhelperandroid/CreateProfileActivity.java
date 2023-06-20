@@ -55,12 +55,14 @@ public class CreateProfileActivity extends AppCompatActivity {
         cancelButton = findViewById(R.id.patient_cancel_button);
         saveButton = findViewById(R.id.patient_save_button);
 
-
+        Intent intent = getIntent();
+        String userID = intent.getStringExtra("userID");
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateProfileActivity.this, MainActivity.class);
+                intent.putExtra("userID", userID);
                 startActivity(intent);
                 finish();
             }

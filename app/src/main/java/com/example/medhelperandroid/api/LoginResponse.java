@@ -2,6 +2,8 @@ package com.example.medhelperandroid.api;
 
 public class LoginResponse {
     private String message;
+
+    private String id;
     private String status;
     private String timestamp;
     private String error;
@@ -35,6 +37,9 @@ public class LoginResponse {
 
     public String getEmail() {
         return email;
+    }
+    public String getId() {
+        return id;
     }
 }
 
