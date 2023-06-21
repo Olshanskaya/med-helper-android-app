@@ -77,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                             String status = response.body().getStatus();
                             // После успешной проверки, можно запустить следующую активность
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.putExtra("userID", response.body().getId());
                             startActivity(intent);
                             finish(); // Опционально закрываем эту активность, чтобы пользователь не мог вернуться к экрану входа по кнопке "Назад"
                             // обработка ответа

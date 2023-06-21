@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -28,8 +30,22 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".CreateProfileActivity"
-            android:label="Create Profile">
+            android:label="Med Helper">
         </activity>
+
+        <activity
+            android:name=".AddMedicineActivity"
+            android:label="Med Helper">
+        </activity>
+
+        <activity
+            android:name=".NotificationActivity"
+            android:label="Med Helper">
+        </activity>
+
+        <receiver android:name="com.example.medhelperandroid.notification.AlarmReceiver"/>
+
+
     </application>
 
 </manifest>
